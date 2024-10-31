@@ -36,7 +36,6 @@ final class HomeViewController: UIViewController {
 }
 
 // MARK: - Bind
-
 private extension HomeViewController {
     func bind(to _: Dependency) {
     }
