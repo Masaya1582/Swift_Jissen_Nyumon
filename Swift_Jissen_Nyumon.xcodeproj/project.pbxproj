@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		40591E602CD3AB190060B994 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 40591E5F2CD3AB190060B994 /* RxCocoa */; };
 		40591E622CD3AB190060B994 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40591E612CD3AB190060B994 /* RxSwift */; };
+		40591E652CD3ABCA0060B994 /* Action in Frameworks */ = {isa = PBXBuildFile; productRef = 40591E642CD3ABCA0060B994 /* Action */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 			files = (
 				40591E622CD3AB190060B994 /* RxSwift in Frameworks */,
 				40591E602CD3AB190060B994 /* RxCocoa in Frameworks */,
+				40591E652CD3ABCA0060B994 /* Action in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +136,7 @@
 			packageProductDependencies = (
 				40591E5F2CD3AB190060B994 /* RxCocoa */,
 				40591E612CD3AB190060B994 /* RxSwift */,
+				40591E642CD3ABCA0060B994 /* Action */,
 			);
 			productName = Swift_Jissen_Nyumon;
 			productReference = 40591E1C2CD3A8200060B994 /* Swift_Jissen_Nyumon.app */;
@@ -219,6 +222,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				40591E5E2CD3AB190060B994 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				40591E632CD3ABCA0060B994 /* XCRemoteSwiftPackageReference "Action" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 40591E1D2CD3A8200060B994 /* Products */;
@@ -619,6 +623,14 @@
 				minimumVersion = 6.8.0;
 			};
 		};
+		40591E632CD3ABCA0060B994 /* XCRemoteSwiftPackageReference "Action" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/Action";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -631,6 +643,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 40591E5E2CD3AB190060B994 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		40591E642CD3ABCA0060B994 /* Action */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40591E632CD3ABCA0060B994 /* XCRemoteSwiftPackageReference "Action" */;
+			productName = Action;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
