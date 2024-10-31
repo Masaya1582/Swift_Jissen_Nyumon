@@ -7,14 +7,32 @@
 
 import Foundation
 
-struct HomeModel: Decodable {
-    let name: String
-    let age: Int
-    let height: Double
-    let gender: Gender
+protocol Pokemon {
+    var name: String { get }
+    func attack()
 }
 
-enum Gender: String, Decodable {
-    case male
-    case female
+struct Pikachu: Pokemon {
+    let name = "Pikachu"
+
+    func attack() {
+        print("\(name) uses Thunderbolt!")
+    }
+}
+
+struct Charmander: Pokemon {
+    let name = "Charmander"
+
+    func attack() {
+        print("\(name) uses Flamethrower!")
+    }
+}
+
+struct Pokeball<T: Pokemon> {
+    var pokemon: T
+
+    func release() {
+        print("Go! \(pokemon.name)")
+        pokemon.attack()
+    }
 }

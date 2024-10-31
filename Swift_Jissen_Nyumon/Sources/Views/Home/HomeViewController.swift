@@ -14,6 +14,8 @@ final class HomeViewController: UIViewController {
     typealias Dependency = HomeViewModelType
 
     // MARK: - Properties
+    private let pikachuBall = Pokeball(pokemon: Pikachu())
+    private let charmanderBall = Pokeball(pokemon: Charmander())
     private lazy var viewModel: HomeViewModelType = { fatalError("Use (dependency: ) at initialize controller") }()
     private let disposeBag = DisposeBag()
 
@@ -31,6 +33,8 @@ final class HomeViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        pikachuBall.release()
+        charmanderBall.release()
         bind(to: viewModel)
     }
 }
