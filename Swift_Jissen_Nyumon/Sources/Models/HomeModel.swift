@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct HomeModel: Codable {
+struct HomeModel: Decodable {
     let name: String
     let age: Int
     let height: Double
     let gender: Gender
 }
 
-enum Gender: String {
+enum Gender: String, Decodable {
     case male
     case female
 }
